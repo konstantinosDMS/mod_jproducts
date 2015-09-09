@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+	<name>MOD_JPRODUCTS_NAME</name>
+	<author>Konstantinos Dimos</author>
+	<creationDate>August 2015</creationDate>
+	<copyright>Copyright (C) 2012. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+	<authorEmail>dms.kon@gmail.com</authorEmail>
+	<authorUrl>www.crimeAnalysis.gr</authorUrl>
+	<version>1.0.0</version>
+	<description>MOD_JPRODUCTS_DESCRIPTION</description>
+	<files>
+		<filename module="mod_jproducts">mod_jproducts.php</filename>
+		<folder>tmpl</folder>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+                <filename>weka.jar</filename>
+		<folder>language</folder>
+	</files>
+        <languages>
+		<language tag="en-GB">en-GB.mod_jProducts.ini</language>
+		<language tag="en-GB">en-GB.mod_jProducts.sys.ini</language>
+	</languages>
+	<help key="JHELP_EXTENSIONS_MODULE_JPRODUCTS" />
+	<config>
+		<fields name="params">
+			<fieldset name="basic" addrulepath="modules/mod_jproducts">			
+				<field name="products_by_retrieve" type="list"
+					default="rec.buy"
+					validate="options"
+					label="MOD_JPRODUCTS_LABEL"
+					description="MOD_JPRODUCTS_RETRIEVE_METHOD"
+				>
+					<option value="rec.buy">MOD_JPRODUCT_REC_BUY</option>
+					<option value="most.buy">MOD_JPRODUCT_MOST_BUY</option>
+					<option value="rec.view">MOD_JPRODUCT_REC_VIEW</option>
+                                        <option value="most.view">MOD_JPRODUCT_MOST_VIEW</option>
+                                        <option value="assoc.rules">MOD_JPRODUCT_ASSOC_RULES</option>
+				</field>
+			</fieldset>
+                        
+			<fieldset
+				name="advanced">
+				<field
+					name="layout"
+					type="modulelayout"
+					label="JFIELD_ALT_LAYOUT_LABEL"
+					description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+
+				<field
+					name="moduleclass_sfx"
+					type="text"
+					label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+					description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+
+				<field
+					name="cache"
+					type="list"
+					default="1"
+					label="COM_MODULES_FIELD_CACHING_LABEL"
+					description="COM_MODULES_FIELD_CACHING_DESC">
+					<option
+						value="1">JGLOBAL_USE_GLOBAL</option>
+					<option
+						value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+				</field>
+				<field
+					name="cache_time"
+					type="text"
+					default="900"
+					label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+					description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+				<field
+					name="cachemode"
+					type="hidden"
+					default="static">
+					<option
+						value="static"></option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
