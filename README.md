@@ -1,5 +1,4 @@
-# mod_jproducts
-This is a module for virtuemart which performs several tasks.
+
 # mod_jProducts.
 A module for virtuemart 3.0.9 - joomla 2.5.28 stable version which performs several tasks such as display 
 the most viewed,buyed products, the recently viewed,buyed products and final performs association rules on products. 
